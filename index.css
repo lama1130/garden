@@ -1,11 +1,14 @@
 body {
   background-color: honeydew;
+  width: 650px;
 }
 
 .garden {
   border: 2px solid maroon;
   padding: 2px;
   gap: 2px;
+  display: grid;
+  
 }
 
 .garden p {
@@ -15,3 +18,108 @@ body {
   background-color: wheat;
   text-align: center;
 }
+
+/* LEVEL 1 GRID */
+  #level-1 {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+/* LEVEL 2 GRID */
+
+  #level-2 .peas {
+    grid-column: 1 / span 2;
+}
+
+/* LEVEL 3 GRID */
+
+#level-3 {
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+}
+
+ #level-3 .peas {
+  grid-row: 1;
+  grid-column: span 1;
+  
+}
+
+#level-3 .onions {
+  grid-row: 1;
+  grid-column: span 2;
+  
+}
+
+ #level-3 .tomatoes {
+  grid-row: 2;
+  grid-column: span 2;
+  
+}
+
+#level-3 .carrots {
+  grid-row: 3;
+  grid-column: span 3;
+  
+}
+
+/* LEVEL 4 GRID */
+
+#level-4 {
+  grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
+}
+
+#level-4 .peas {
+  grid-row: 1;
+  grid-column: span 2;
+}
+
+#level-4 .tomatoes {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+#level-4 .lettuce {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+#level-4 .onions {
+  grid-row: span 2;
+  grid-column: 3;
+}
+
+#level-4 .carrots {
+  grid-row: span 2;
+  grid-column: 4;
+}
+
+/* LEVEL 5 GRID */
+
+#level-5 {
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr;
+}
+
+#level-5 .peas {
+  grid-row: 2;
+  grid-column: 4 / span 2;
+}
+
+#level-5 .onions {
+  grid-row: 1 / span 2;
+  grid-column: 3;
+}
+
+#level-5 .tomatoes {
+  grid-row: 3;
+  grid-column: 2 / span 3;
+}
+
+#level-5 .lettuce {
+  grid-row: 1;
+  grid-column: 5;
+}
+
+#level-5 .carrots {
+  grid-row: 1/ span 3;
+  grid-column: 1;
+}
+
